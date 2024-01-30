@@ -5,14 +5,14 @@ import org.example.MessageHandler;
 import org.example.logic.BotRequest;
 import org.example.logic.BotResponse;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
-import org.telegram.telegrambots.meta.api.objects.Message;
-import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class Bot extends TelegramLongPollingBot implements AnswerWriter {
     private final BotConverter converter = new BotConverter();
-    private final MessageHandler messageHandler;
+    //private final BotConfig config;
+    private MessageHandler messageHandler;
 
     public Bot(MessageHandler messageHandler) {
         this.messageHandler = messageHandler;
